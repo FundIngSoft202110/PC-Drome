@@ -7,13 +7,21 @@ import { HomeComponent } from './Presentacion/home/home.component';
 import { LoginFloatComponent } from './Presentacion/login-float/login-float.component';
 import { ArmatupcComponent } from './Presentacion/armatupc/armatupc.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderMenuComponent } from './Presentacion/header-menu/header-menu.component';
+import { RegisterFloatComponent } from './Presentacion/register-float/register-float.component';
+import { ProductsSectionHomeComponent } from './Presentacion/products-section-home/products-section-home.component';
+import { FooterComponent } from './Presentacion/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginFloatComponent,
-    ArmatupcComponent
+    ArmatupcComponent,
+    HeaderMenuComponent,
+    RegisterFloatComponent,
+    ProductsSectionHomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
