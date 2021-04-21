@@ -1,0 +1,313 @@
+{
+    "PROCESADORES": [
+        {
+            "NOMBRE": "INTEL CORE I5 9400F",
+            "IDPRODUCTO": 1,
+            "PRECIO": 650000,
+            "MARCA": "INTEL",
+            "DESCRIPCION": "PROCESADOR DE 7 GEN",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/PROCESADORES%2F1.jpg?alt=media&token=c210100b-a614-4953-9e76-7d2cfc93cb8c",
+            "DESCUENTO": 0,
+            "MODELO": "CORE",
+            "VELOCIDAD": 2.9,
+            "CANTIDADNUCLEOS": "6 CORE",
+            "TAMANOCACHE": "8 MB",
+            "TIPOSOCKET": "ENUM-SOCKET-3",
+            "GENERACION": "9400F"
+        },
+        {
+            "NOMBRE": "INTEL CORE I7 11700K",
+            "IDPRODUCTO": 14,
+            "PRECIO": 2090000,
+            "MARCA": "INTEL",
+            "DESCRIPCION": "PROCESADOR DE 11 GEN",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/PROCESADORES%2F14.jpg?alt=media&token=6f08fb1e-95aa-44c6-a1bf-34c5f41328ae",
+            "DESCUENTO": 0,
+            "MODELO": "CORE",
+            "VELOCIDAD": 3.6,
+            "CANTIDADNUCLEOS": "8 CORE",
+            "TAMANOCACHE": "12 MB",
+            "TIPOSOCKET": "ENUM-SOCKET-4",
+            "GENERACION": "11700K"
+        },
+        {
+            "NOMBRE": "AMD RYZEN R5 3600",
+            "IDPRODUCTO": 15,
+            "PRECIO": 920000,
+            "MARCA": "AMD",
+            "DESCRIPCION": "PROCESADOR DE 11 GEN",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/PROCESADORES%2F15.jpg?alt=media&token=8c5d67b7-6c53-4924-901a-f93f7599e494",
+            "DESCUENTO": 0,
+            "MODELO": "CORE",
+            "VELOCIDAD": 3.6,
+            "CANTIDADNUCLEOS": "8 CORE",
+            "TAMANOCACHE": "12 MB",
+            "TIPOSOCKET": "ENUM-SOCKET-1",
+            "GENERACION": "11700K"
+        }
+    ],
+    "RAM": [
+        {
+            "NOMBRE": "DDR4 8G 2600MHZ",
+            "IDPRODUCTO": 53,
+            "PRECIO": 165000,
+            "MARCA": "CRUCIAL VALUE",
+            "DESCRIPCION": "DDR4 8G 2600MHZ CRUCIAL VALUE",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/RAM%2F53.jpg?alt=media&token=d90bc13e-94f4-4531-b52f-90c0971850d9",
+            "DESCUENTO": 0,
+            "TAMANOMEMORIA": "8G",
+            "VELOCIDADMEMORIA": "2600MHZ",
+            "TIPO": "ENUM-TIPORAM-2"
+        },
+        {
+            "NOMBRE": "DDR4 8G 3600MHZ",
+            "IDPRODUCTO": 61,
+            "PRECIO": 240000,
+            "MARCA": "KINGSTON HYPER-X FURY ",
+            "DESCRIPCION": "DDR4 8G 3600MHZ KINGSTON HYPER-X FURY ",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/RAM%2F61.jpg?alt=media&token=dcd85624-2817-4b4e-b55b-ac2fa3fff9ec",
+            "DESCUENTO": 0,
+            "TAMANOMEMORIA": "8G",
+            "VELOCIDADMEMORIA": "3600MHZ",
+            "TIPO": "ENUM-TIPORAM-2"
+        },
+        {
+            "NOMBRE": "DDR4 32G 3200MHZ",
+            "IDPRODUCTO": 80,
+            "PRECIO": 930000,
+            "MARCA": "KINGSTON HYPER-X FURY",
+            "DESCRIPCION": "DDR4 32G 3200MHZ KINGSTON HYPER-X FURY ",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/RAM%2F80.jpg?alt=media&token=98ec8ff2-9870-4429-b15d-5045fa02838d",
+            "DESCUENTO": 0,
+            "TAMANOMEMORIA": "32G",
+            "VELOCIDADMEMORIA": "3200MHZ",
+            "TIPO": "ENUM-TIPORAM-2"
+        }
+    ],
+    "FUENTEPODER": [
+        {
+            "NOMBRE": "XPG 450W ",
+            "IDPRODUCTO": 121,
+            "PRECIO": 169000,
+            "MARCA": "XPG",
+            "DESCRIPCION": "XPG 450W 80 PLUS BRONZE",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/FUENTEPODER%2F121.jpg?alt=media&token=672e6b77-f2ce-49e8-b097-90692f6adc0f",
+            "DESCUENTO": 0,
+            "FABRICANTE": "XPG",
+            "POTENCIA": "450W",
+            "CERTIFICADO": "80 PLUS BRONZE",
+            "TIPO": "ENUM-TIPOMODELO-1"
+        },
+        {
+            "NOMBRE": "COUGAR 700W",
+            "IDPRODUCTO": 133,
+            "PRECIO": 324000,
+            "MARCA": "COUGAR",
+            "DESCRIPCION": "COUGAR 700W 80 PLUS GOLD",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/FUENTEPODER%2F133.jpg?alt=media&token=e856e1a1-3301-4482-98b4-6776dc977df6",
+            "DESCUENTO": 0,
+            "FABRICANTE": "COUGAR",
+            "POTENCIA": "700W",
+            "CERTIFICADO": "80 PLUS GOLD",
+            "TIPO": "ENUM-TIPOMODELO-2" 
+        },
+        {
+            "NOMBRE": "COUGAR 850W",
+            "IDPRODUCTO": 139,
+            "PRECIO": 459000,
+            "MARCA": "XPG",
+            "DESCRIPCION": "COUGAR 850W 80 PLUS GOLD",
+            "FOTO": "https://console.firebase.google.com/project/pcdrome-puj/storage/pcdrome-puj.appspot.com/files~2FFUENTEPODER",
+            "DESCUENTO": 0,
+            "FABRICANTE": "COUGAR",
+            "POTENCIA": "850W",
+            "CERTIFICADO": "80 PLUS GOLD",
+            "TIPO": "ENUM-TIPOMODELO-3" 
+        }
+    ],
+    "MOTHERBOARD": [
+        {
+            "NOMBRE": "ASUS H310M",
+            "IDPRODUCTO": 27,
+            "PRECIO": 265000,
+            "MARCA": "ASUS",
+            "DESCRIPCION": "ASUS H310M LGA1151",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/MOTHERBOARD%2F27.jpg?alt=media&token=f37a63d4-2ba7-4d08-b7a3-7837104274d6",
+            "DESCUENTO": 0,
+            "TIPOSOCKET": "ENUM-SOCKET-3",
+            "TECNOLOGIARAM": "ENUM-TIPORAM-2",
+            "RANURASMEMORIA": "2DDR4",
+            "MODELO": "ENUM-TIPOMODELO-1"
+        },
+        {
+            "NOMBRE": "MSI MAG B460",
+            "IDPRODUCTO": 40,
+            "PRECIO": 690000,
+            "MARCA": "MSI",
+            "DESCRIPCION": "MSI MAG B460 LGA1200",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/MOTHERBOARD%2F40.jpg?alt=media&token=374e9667-71b4-4bd7-aa9d-9e35036a85b3",
+            "DESCUENTO": 0,
+            "TIPOSOCKET": "ENUM-SOCKET-4",
+            "TECNOLOGIARAM": "ENUM-TIPORAM-2",
+            "RANURASMEMORIA": "4DDR4",
+            "MODELO": "ENUM-TIPOMODELO-1"
+        },
+        {
+            "NOMBRE": "ASUS ROG STRIX TRX40",
+            "IDPRODUCTO": 52,
+            "PRECIO": 2180000,
+            "MARCA": "ASUS",
+            "DESCRIPCION": "ASUS ROG STRIX TRX40 TRX4",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/MOTHERBOARD%2F52.jpg?alt=media&token=f5bec841-5ae8-40d0-bbfc-9419d2114612",
+            "DESCUENTO": 0,
+            "TIPOSOCKET": "ENUM-SOCKET-2",
+            "TECNOLOGIARAM": "ENUM-TIPORAM-2",
+            "RANURASMEMORIA": "8DDR4",
+            "MODELO": "ENUM-TIPOMODELO-2"
+        }
+    ],
+    "DISCODURO": [
+        {
+            "NOMBRE": "KINGSTON A400",
+            "IDPRODUCTO": 81,
+            "PRECIO": 115000,
+            "MARCA": "KINGSTON",
+            "DESCRIPCION": "KINGSTON A400 120GB",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/DISCODURO%2F81.jpg?alt=media&token=202d17e5-85b6-4767-9db4-4ad411dd6b76",
+            "DESCUENTO": 0,
+            "CAPACIDAD": "120GB",
+            "TIPO": "ENUM-TIPOFORMATO-1",
+            "FABRICANTE": "KINGSTON"
+        },
+        {
+            "NOMBRE": "SANDISK PLUS",
+            "IDPRODUCTO": 92,
+            "PRECIO": 395000,
+            "MARCA": "SANDISK",
+            "DESCRIPCION": "SANDISK PLUS 1TB",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/DISCODURO%2F92.jpg?alt=media&token=1df032bb-2971-49ae-8b5c-6000cdf46674",
+            "DESCUENTO": 0,
+            "CAPACIDAD": "1TB",
+            "TIPO": "ENUM-TIPOFORMATO-2",
+            "FABRICANTE": "SANDISK"
+        },
+        {
+            "NOMBRE": "SAMSUNG",
+            "IDPRODUCTO": 97,
+            "PRECIO": 365000,
+            "MARCA": "SAMSUNG",
+            "DESCRIPCION": "SAMSUNG 4TB",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/DISCODURO%2F97.jpg?alt=media&token=d4a360aa-e9da-4d2d-9922-344c058b6be9",
+            "DESCUENTO": 0,
+            "CAPACIDAD": "4TB",
+            "TIPO": "ENUM-TIPOFORMATO-3",
+            "FABRICANTE": "SAMSUNG"
+        }
+    ],
+    "CHASIS": [
+        {
+            "NOMBRE": "AEROCOOL STREAK",
+            "IDPRODUCTO": 140,
+            "PRECIO": 229000,
+            "MARCA": "AEROCOOL",
+            "DESCRIPCION": "AEROCOOL STREAK ATX",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/CHASIS%2F140.jpg?alt=media&token=c398f5f8-463f-4a75-9563-a4cd5f2cfcc5",
+            "DESCUENTO": 0,
+            "COMPMOTHERBOARD": "ENUM-TIPOMODELO-1"
+        },
+        {
+            "NOMBRE": "CORSAIR ICUE",
+            "IDPRODUCTO": 150,
+            "PRECIO": 479000,
+            "MARCA": "CORSAIR",
+            "DESCRIPCION": "CORSAIR ICUE ATX",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/CHASIS%2F150.jpg?alt=media&token=52ed886b-be8d-4690-ba9f-127a9dd14658",
+            "DESCUENTO": 0,
+            "COMPMOTHERBOARD": "ENUM-TIPOMODELO-1"
+        },
+        {
+            "NOMBRE": "THERMALTAKE LEVEL20",
+            "IDPRODUCTO": 160,
+            "PRECIO": 559000,
+            "MARCA": "THERMALTAKE",
+            "DESCRIPCION": "THERMALTAKE LEVEL20 ATX",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/CHASIS%2F160.jpg?alt=media&token=f7fbeca5-edd7-4330-9fb5-2b957d7bbf57",
+            "DESCUENTO": 0,
+            "COMPMOTHERBOARD": "ENUM-TIPOMODELO-1"
+        }
+    ],
+    "DISIPADOR": [
+        {
+            "NOMBRE": "AEROCOOL CORE PLUS",
+            "IDPRODUCTO": 107,
+            "PRECIO": 99000,
+            "MARCA": "AEROCOOL",
+            "DESCRIPCION": "AEROCOOL CORE PLUS ESTANDAR",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/DISIPADOR%2F107.jpg?alt=media&token=877046aa-14f9-40c6-b0cf-04755f927900",
+            "DESCUENTO": 0,
+            "SOCKETCPU": "ENUM-SOCKET-3",
+            "TIPOREFRIGERACION": "ESTANDAR"
+        },
+        {
+            "NOMBRE": "COOLER MASTER LIQUID 120L",
+            "IDPRODUCTO": 114,
+            "PRECIO": 279000,
+            "MARCA": "THERMALTAKE",
+            "DESCRIPCION": "COOLER MASTER LIQUID 120L LIQUIDA",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/DISIPADOR%2F114.jpg?alt=media&token=954a6f3e-96c3-41e9-92f5-7b49380db123",
+            "DESCUENTO": 0,
+            "SOCKETCPU": "ENUM-SOCKET-1",
+            "TIPOREFRIGERACION": "LIQUIDA"
+        },
+        {
+            "NOMBRE": "MSI MAG CORELIQUID",
+            "IDPRODUCTO": 120,
+            "PRECIO": 629000,
+            "MARCA": "MSI",
+            "DESCRIPCION": "MSI MAG CORELIQUID LIQUIDA",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/DISIPADOR%2F120.jpg?alt=media&token=220d4918-641e-4650-8c5c-fa2b1d0a6be8",
+            "DESCUENTO": 0,
+            "SOCKETCPU": "ENUM-SOCKET-1",
+            "TIPOREFRIGERACION": "LIQUIDA"
+        }
+    ],
+    "GPU": [
+        {
+            "NOMBRE": "NVIDIA GT710",
+            "IDPRODUCTO": 101,
+            "PRECIO": 790000,
+            "MARCA": "MSI",
+            "DESCRIPCION": "NVIDIA MSI GT710",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/GPU%2F101.jpg?alt=media&token=f5672daa-2be5-4507-90bc-8b78bc21c88f",
+            "DESCUENTO": 0,
+            "MARCACHIPSET": "ENUM-CHIPSET-1",
+            "ALMACENAMIENTO": "4GB",
+            "TIPORAM": "ENUM-TIPORAMGPU-1"
+        },
+        {
+            "NOMBRE": "NVIDIA RTX 3060",
+            "IDPRODUCTO": 103,
+            "PRECIO": 2999000,
+            "MARCA": "EVGA",
+            "DESCRIPCION": "NVIDIA EVGA RTX 3060",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/GPU%2F103.jpg?alt=media&token=5ffb0e65-d80c-4ebe-9a4b-c383d1891eaf",
+            "DESCUENTO": 0,
+            "MARCACHIPSET": "ENUM-CHIPSET-1",
+            "ALMACENAMIENTO": "12GB",
+            "TIPORAM": "ENUM-TIPORAMGPU-2"
+        },
+        {
+            "NOMBRE": "AMD RX6700XT",
+            "IDPRODUCTO": 106,
+            "PRECIO": 3790000,
+            "MARCA": "MSI",
+            "DESCRIPCION": "AMD MSI RX6700XT",
+            "FOTO": "https://firebasestorage.googleapis.com/v0/b/pcdrome-puj.appspot.com/o/GPU%2F106.jpg?alt=media&token=57ed384b-6529-4ee7-aab7-75eea7689498",
+            "DESCUENTO": 0,
+            "MARCACHIPSET": "ENUM-CHIPSET-2",
+            "ALMACENAMIENTO": "12GB",
+            "TIPORAM": "ENUM-TIPORAMGPU-2"
+        }
+    ]
+
+}
