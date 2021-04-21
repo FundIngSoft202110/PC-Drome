@@ -11,6 +11,10 @@ import { HeaderMenuComponent } from './Presentacion/header-menu/header-menu.comp
 import { RegisterFloatComponent } from './Presentacion/register-float/register-float.component';
 import { ProductsSectionHomeComponent } from './Presentacion/products-section-home/products-section-home.component';
 import { FooterComponent } from './Presentacion/footer/footer.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,10 @@ import { FooterComponent } from './Presentacion/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pcdrome-puj": {
+      "hosting": {
+        "PCDROME": [
+          "pcdrome-puj"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pcdrome-puj"
+  }
+}
