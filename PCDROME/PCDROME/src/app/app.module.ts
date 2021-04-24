@@ -15,6 +15,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { PerfilDeUsuarioComponent } from './Presentacion/perfil-de-usuario/perfil-de-usuario.component';
+import { GestionProductosComponent } from './Presentacion/gestion-productos/gestion-productos.component';
+import { CarritoDeComprasComponent } from './Presentacion/carrito-de-compras/carrito-de-compras.component';
+import { PagarPedidoComponent } from './Presentacion/pagar-pedido/pagar-pedido.component';
+import { RecomendacionesComponent } from './Presentacion/recomendaciones/recomendaciones.component';
+import { ResultadosDeBusquedaComponent } from './Presentacion/resultados-de-busqueda/resultados-de-busqueda.component';
+import { ChatComponent } from './Presentacion/chat/chat.component';
+import { ProductoComponent } from './Presentacion/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +34,14 @@ import { environment } from '../environments/environment';
     RegisterFloatComponent,
     ProductsSectionHomeComponent,
     FooterComponent,
+    PerfilDeUsuarioComponent,
+    GestionProductosComponent,
+    CarritoDeComprasComponent,
+    PagarPedidoComponent,
+    RecomendacionesComponent,
+    ResultadosDeBusquedaComponent,
+    ChatComponent,
+    ProductoComponent,
   ],
   imports: [
     BrowserModule,
