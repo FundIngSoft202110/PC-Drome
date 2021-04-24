@@ -1,0 +1,90 @@
+.cabezera{
+  background-color: #502f4c;
+  display: block;
+  height: 50px;
+  padding: 10px 5%;
+  padding-top: 13px;
+}
+
+.titulo{
+  display: inline;
+  text-decoration: none;
+  color: #fff;
+  font-size: 37px;
+}
+
+.buscador_home{
+  display: inline-block;
+  margin-left: 10%;
+  position: absolute;
+  margin-top: 6px;
+  width: 50%;
+}
+
+.sign_in{
+  display: block;
+  float: right!important;
+  margin-top: 9px;
+}
+
+.ingresar{
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+.buscador{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 35px;
+  width: 80%;
+  font-size: 25px;
+  border: none;
+}
+.boton_buscar{
+  height: 35px;
+  position: absolute;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  flex: 0 0 auto;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  margin-left: 1px;
+}
+
+.menu{
+  text-decoration: none;
+  color: #502f4c;
+  font-size: 20px;
+  padding-right: 1%;
+  padding-left: 1%;
+  cursor: pointer;
+  float: left;
+  display: block;
+  height: 32px;
+  padding-top: 5px;
+}
+.menu:hover{
+  background-color: #c8b8db;
+}
+#opcion1{
+  margin-left: 5%;
+}
+
+footer{
+  background-color: #502f4c;
+  display: block;
+  color: #fff
+}
+
+main{
+  margin-top: 45px;
+}
+
+.carrito{
+  display: block;
+  float: right;
+  margin-right: 5%;
+  margin-top: 9px;
+}
