@@ -1,7 +1,10 @@
 <app-header-menu></app-header-menu>
 <main>
-  <app-armatupc>
-  </app-armatupc>
+  <ul>
+    <li class="text" *ngFor="let item of items | async">
+      {{item.NOMBRE}}
+    </li>
+  </ul>
   <p>Aqui va esa imagen cula y el resto de contenido</p>
 </main>
 <footer>

@@ -8,16 +8,8 @@ import {GetProcesadoresUsecase} from '../../nucleo/Casos de uso/getProcesadores.
 })
 
 export class ArmatupcComponent implements OnInit{
-  isLinear: boolean;
-  savePartById: string[];
   constructor() {
-    this.isLinear = false;
-    this.savePartById = [];
   }
   ngOnInit(): void {
-    this.getProcesadores();
-  }
-  getProcesadores(): void{
-    GetProcesadoresUsecase.prototype.obternerProcesadores();
   }
 }
