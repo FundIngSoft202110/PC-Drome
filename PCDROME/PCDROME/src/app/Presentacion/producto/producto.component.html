@@ -1,1 +1,77 @@
-<p>producto works!</p>
+<body class="margen">
+  <div class="fondo">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <div class="imagen">
+            <img src="{{pr.foto}}"  class="img-thumbnail">
+          </div>
+        </div>
+
+
+        <div class="col-8">
+          <div class="tituloProducto" >
+            {{pr.nombre}}
+          </div>
+          <div class="descripcion" >
+            <p>Descripción: {{pr.descripcion}}</p>
+            <p>Marca: {{pr.marca}}</p>
+          </div>
+          <div class="precio">
+            Precio: {{pr.precio}} x UND
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-6">
+          
+          <div class="cantidad">
+            Cantidad
+            <input type="number" id="quantity" name="quantity" min="1" max="1000">
+          </div>
+        </div>
+        <div class="col-4"> 
+          <button class="botonCo">COMPRAR</button>
+          <button class="botonCa">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+  
+      <div class="row">
+        
+          <div class="col-12">
+            <hr style="border:3px solid light">
+              CALIFICACIÓN
+            <div class = "calificacion">
+
+               <input type="radio" name="star"  id="star1">
+               <label for="star1" class="fa fa-star"></label>
+               <input type="radio" name="star" id="star2">
+               <label for="star2" class="fa fa-star" ></label>
+               <input type="radio" name="star" id="star3">
+               <label for="star3" class="fa fa-star"></label>
+               <input type="radio" name="star" id="star4">
+               <label for="star4" class="fa fa-star"></label>
+               <input type="radio" name="star" id="star5">
+               <label for="star5" class="fa fa-star"></label>
+
+            </div>
+ 
+            COMENTARIOS
+            <div class="input-group">
+              <textarea class="form-control" aria-label="With textarea" placeholder="Escriba aqui su comentario"></textarea>
+            </div>
+            <div>
+              <hr style="border:3px solid light">
+              
+              
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+  </div>    
+</body>

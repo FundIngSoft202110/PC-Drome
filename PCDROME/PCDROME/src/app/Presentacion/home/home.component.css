@@ -1,0 +1,10 @@
+.botonCo{
+    background-color: #C8B8DB;
+    color: #502f4c;
+    border-radius: 10px;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+}

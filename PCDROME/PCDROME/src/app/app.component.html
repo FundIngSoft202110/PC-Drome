@@ -1,12 +1,4 @@
 <app-header-menu></app-header-menu>
-<main>
-  <ul>
-    <li class="text" *ngFor="let item of items | async">
-      {{item.NOMBRE}}
-    </li>
-  </ul>
-  <p>Aqui va esa imagen cula y el resto de contenido</p>
-</main>
-<footer>
-  <span>Este es el footer</span>
-</footer>
+<router-outlet></router-outlet>
+
+<footer></footer>

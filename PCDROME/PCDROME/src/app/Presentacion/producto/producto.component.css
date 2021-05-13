@@ -1,0 +1,105 @@
+.margen{
+    padding: 5%;
+    padding-top: 28px;
+    padding-bottom: 0%;
+    background-color:rgba(0,0,0,0.1);
+  }
+
+  .fondo{
+    background-color:#F9F4F5;
+    border-radius: 10px;
+  }
+  
+  .imagen{
+    background-color: #fff;
+    border: solid 1px;
+    margin-top: 20px;
+  }
+  
+  .Producto{
+      background: #C8B8DB;
+      float: right;
+      display: block;
+      height: 70%;
+      width: 30%;
+      margin-top: 10px;
+      margin-right: 11px;
+      border-radius: 10px;
+  }
+  
+  .tituloProducto{
+      
+     text-align: center;
+     font-size: 40px;
+     font-weight: 500;
+     color: #502f4c;
+      
+  }
+  .descripcion{
+    font-size: 20px;
+  }
+
+  .precio{  
+    font-size: 30px; 
+ }
+
+
+  /*-----------------------------------------------------------------------------*/
+  
+  .botonCa{
+      background-color: #502f4c;
+      color: #C8B8DB;
+      border-radius: 10px;
+      float: right;
+      font-size: 20px;
+      padding: 10px;
+      border: 0;
+      cursor: pointer;
+      margin-right: 10px;
+  }
+
+  .botonCo{
+    background-color: #C8B8DB;
+    color: #502f4c;
+    border-radius: 10px;
+    float: right;
+    font-size: 20px;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.cantidad{
+    float: right;
+    margin-top: 10px;
+    margin-right: 4px;
+}
+  
+  
+  /*-----------------------------------------------------------------------------*/
+.comentario{
+  font-weight: 200;
+  margin-left: 20px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+  
+.boton{
+  text-decoration: none;
+      
+}
+.calificacion input{
+  display: none;
+}
+
+.calificacion label{
+  color: rgba(0,0,0,0.2);
+  width: 30px;
+  font-size: 20px;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  
+  color: darkorange;  
+}
+
