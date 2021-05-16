@@ -1,10 +1,10 @@
-<body class="margen">
+<main class="margen">
   <div class="fondo">
     <div class="container-fluid">
       <div class="row">
         <div class="col-4">
           <div class="imagen">
-            <img src="{{pr.foto}}"  class="img-thumbnail">
+            <img src="{{pr.foto}}" width="200px" height="200px" alt="ImagenProducto" class="img-thumbnail">
           </div>
         </div>
 
@@ -26,24 +26,24 @@
       <div class="row">
         <div class="col-2"></div>
         <div class="col-6">
-          
+
           <div class="cantidad">
             Cantidad
             <input type="number" id="quantity" name="quantity" min="1" max="1000">
           </div>
         </div>
-        <div class="col-4"> 
+        <div class="col-4">
           <button class="botonCo">COMPRAR</button>
           <button class="botonCa">AGREGAR AL CARRITO</button>
         </div>
       </div>
 
-  
+
       <div class="row">
-        
+
           <div class="col-2">
             <hr style="border:3px solid light">
-              <span class="descripcion">CALIFICACIÓN</span> 
+              <span class="descripcion">CALIFICACIÓN</span>
             <div class = "calificacion">
 
                <input type="radio" name="star" id="star5" value="5" (change)="tomarCalificacion($event)">
@@ -57,14 +57,14 @@
                <input type="radio" name="star" id="star1" value="1" (change)="tomarCalificacion($event)">
                <label for="star1" class="fa fa-star"></label>
 
-            </div>      
+            </div>
             </div>
           </div>
           <div class="col-12">
-            <span class="descripcion">COMENTARIOS</span> 
+            <span class="descripcion">COMENTARIOS</span>
             <div class="input-group">
               <textarea class="form-control" #t1 placeholder="Escriba aqui su comentario" ></textarea>
-              
+
             </div>
             <div>
               <button type="submit" class="btnEnviar" (click)="getValue(t1.value)">Enviar</button>
@@ -73,5 +73,5 @@
       </div>
     </div>
 
-  </div>    
-</body>
+  </div>
+</main>

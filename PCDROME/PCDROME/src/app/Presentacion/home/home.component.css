@@ -1,8 +1,8 @@
 .recomendacion{
     text-decoration: none;
     display: block;
-    background-color: rgba(78, 18, 97, 0.9);
-    color: #fff;
+    background-color: #C8B8DB;
+    color: #000000;
     font-size: 22px;
     width: 300px;
     margin: auto;
@@ -14,11 +14,45 @@
 }
 
 .recomendacion:hover{
-    background-color: rgb(78, 18, 97);
+    background-color: #9f83c1;
+}
+
+.armarPC{
+  text-decoration: none;
+  display: block;
+  background-color: #C8B8DB;
+  color: #000000;
+  font-size: 22px;
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.armarPC:hover{
+  background-color: #9f83c1;
 }
 
 .botonRecomendacion{
-    display: block;
-
+    position: absolute;
     text-align: center;
+    top: 400px;
+    left: 70%;
 }
+
+.botonArmarPC{
+  position: absolute;
+  text-align: center;
+  top: 400px;
+  left: 45%;
+}
+
+.img_home{
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 20%;
+}
+

@@ -1,0 +1,58 @@
+.content{
+  display: block;
+  background-color: #fff;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 94%;
+  margin-top: 20px;
+  height: auto;
+  padding-bottom: 20px;
+}
+.productos_carro{
+  display: block;
+  float: left;
+  width: 70%;
+  height: 280px;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.precio_carro{
+  display: inline-block;
+  width: 29%;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.price_carro{
+  font-size: 30px;
+  font-weight: 1000;
+}
+
+.boton_pagar{
+  text-decoration: none;
+  display: block;
+  background-color: rgba(78, 18, 97, 0.9);
+  color: #fff;
+  font-size: 22px;
+  width: 150px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: none;
+  padding: 8px 16px;
+}
+.boton_pagar:hover{
+  background-color: rgb(78, 18, 97);
+}
+
+.title_productos{
+  display: block;
+  font-size: 40px;
+  font-weight: 1000;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 3px;
+}

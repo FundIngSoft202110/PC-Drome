@@ -1,4 +1,5 @@
 .margen{
+    display: block;
     padding: 5%;
     padding-top: 28px;
     padding-bottom: 0%;
@@ -9,13 +10,15 @@
     background-color:#F9F4F5;
     border-radius: 10px;
   }
-  
+
   .imagen{
-    background-color: #fff;
-    border: solid 1px;
+    display: block;
+    float: left;
+    width: 20%;
     margin-top: 20px;
+    margin-left: 30px;
   }
-  
+
   .Producto{
       background: #C8B8DB;
       float: right;
@@ -26,27 +29,27 @@
       margin-right: 11px;
       border-radius: 10px;
   }
-  
+
   .tituloProducto{
-      
+
      text-align: center;
      font-size: 40px;
      font-weight: 500;
      color: #502f4c;
-      
+
   }
   .descripcion{
     padding-top: 20px;
     font-size: 20px;
   }
 
-  .precio{  
-    font-size: 30px; 
+  .precio{
+    font-size: 30px;
  }
 
 
   /*-----------------------------------------------------------------------------*/
-  
+
   .botonCa{
       background-color: #502f4c;
       color: #C8B8DB;
@@ -75,8 +78,8 @@
     margin-top: 10px;
     margin-right: 4px;
 }
-  
-  
+
+
   /*-----------------------------------------------------------------------------*/
 .comentario{
   font-weight: 200;
@@ -84,10 +87,10 @@
   font-size: 20px;
   margin-bottom: 10px;
 }
-  
+
 .boton{
   text-decoration: none;
-      
+
 }
 .calificacion{
   margin-top: 10px;
@@ -108,12 +111,12 @@
 
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover~ label{
-  
-  color: darkorange;  
+
+  color: darkorange;
 }
 
 input:checked ~ label{
-  color: darkorange;  
+  color: darkorange;
 }
 
 .btnEnviar{
