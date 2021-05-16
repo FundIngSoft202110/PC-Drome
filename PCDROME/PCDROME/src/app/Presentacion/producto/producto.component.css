@@ -36,6 +36,7 @@
       
   }
   .descripcion{
+    padding-top: 20px;
     font-size: 20px;
   }
 
@@ -88,6 +89,11 @@
   text-decoration: none;
       
 }
+.calificacion{
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
 .calificacion input{
   display: none;
 }
@@ -96,10 +102,30 @@
   color: rgba(0,0,0,0.2);
   width: 30px;
   font-size: 20px;
+  float: right;
+  cursor: pointer;
 }
+
 input:not(:checked) ~ label:hover,
-input:not(:checked) ~ label:hover ~ label{
+input:not(:checked) ~ label:hover~ label{
   
   color: darkorange;  
+}
+
+input:checked ~ label{
+  color: darkorange;  
+}
+
+.btnEnviar{
+  background-color: #C8B8DB;
+  color: #fff;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btnEnviar:hover{
+  background-color: #502f4c;
 }
 

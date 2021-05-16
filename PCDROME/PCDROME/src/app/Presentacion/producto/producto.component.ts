@@ -20,6 +20,7 @@ export class ProductoComponent implements OnInit {
   private producto: any;
   public pr: any;
   private idProducto:any;
+  
 
   constructor(private pServicios:ServicioComprasService, private ruta: ActivatedRoute, ) {
  
@@ -50,6 +51,14 @@ export class ProductoComponent implements OnInit {
     }
   }
 
+  tomarCalificacion(event: any){
+    console.log(event.target.name, event.target.value);
+  }
+
+  getValue(value: string){
+    console.log(value);
+  }
+
   darCPU(){
     this.pr = new CPU("Nombre",0,0,"marca","descripcion","foto",0,"modelo",0,"nucleos","cache","socket","generacion");
     
@@ -65,7 +74,7 @@ export class ProductoComponent implements OnInit {
      
    });
   }
-  darRAM(){
+   darRAM(){
     this.pr = new RAM("Nombre",0,0,"marca","descripcion","foto",0,"tMemoria","tipo","velocidad");
 
     this.pServicios.retornarItems("RAM").subscribe(items => {
@@ -77,7 +86,7 @@ export class ProductoComponent implements OnInit {
                         this.producto[0].TAMANOMEMORIA,this.producto[0].TIPO,this.producto[0].VELOCIDAD)
      console.log(this.pr);
    });
-  }
+  } 
   darMother(){
     this.pr = new Motherboard("Nombre",0,0,"marca","descripcion","foto",0,0,"tecRam","tSocket");
 

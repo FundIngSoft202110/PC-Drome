@@ -1,7 +1,7 @@
 .cabezera{
   background-color: #502f4c;
   display: block;
-  height: 70px;
+  height: 60px;
   padding: 10px 5%;
   padding-top: 13px;
 }
@@ -72,19 +72,15 @@
   margin-left: 5%;
 }
 
-footer{
-  background-color: #502f4c;
-  display: block;
-  color: #fff
-}
-
-main{
-  margin-top: 45px;
-}
 
 .carrito{
   display: block;
   float: right;
   margin-right: 5%;
   margin-top: 9px;
+}
+
+.menu_home{
+  display: block;
+  height: 30px;
 }
