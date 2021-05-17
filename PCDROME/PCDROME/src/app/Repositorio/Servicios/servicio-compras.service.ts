@@ -27,7 +27,7 @@ export class ServicioComprasService {
   }
 
   retornarItems(nColeccion: string){
-    this.darColeccion(nColeccion)
+    this.darColeccion(nColeccion);
     return this.productos;
   }
   
@@ -113,5 +113,5 @@ export class ServicioComprasService {
         }))
       );
     }
-  }
+  } 
 }

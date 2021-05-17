@@ -1,0 +1,55 @@
+<main>
+    <div class="espacio"></div>
+    <div class="filtros">
+      <form style="margin-left: 5%;">
+        <!--Procesador-->
+        <h3>Procesador</h3>
+        <span class="filtro">
+                          <input type="radio" name="CPU"/>Intel
+                      </span>
+        <br>
+        <span class="filtro">
+                          <input type="radio" name="CPU"/>AMD
+                      </span>
+  
+        <!--RAM-->
+        <h3>RAM</h3>
+        <span class="filtro">
+                          <input type="radio" name="RAM"/>8 GB
+                      </span>
+        <br>
+        <span class="filtro">
+                          <input type="radio" name="RAM"/>16 GB o mas
+                      </span>
+  
+        <!--Precio-->
+        <h3>Precio</h3>
+        <span class="filtro">
+                          <input type="number" name="precio" placeholder="Minimo" class="filtro_precio"/> -
+                          <input type="number" name="precio" placeholder="Maximo" class="filtro_precio"/>
+                      </span>
+        <button class="boton_filtros">Aplicar filtros</button>
+      </form>
+    </div>
+    <div class="pcs">
+      <span class="subtitulo">Categoria de productos</span>
+      <div class="pc" *ngFor="let producto of productos">
+        <a class="imagen" routerLink="/producto/{{producto.id}}">
+          <img src="{{producto.FOTO}}" width="200px" height="200px" alt="ImagenProducto">
+        </a>
+        <div class="informacion">
+          <div class="part1">
+                              <span class="descripcion">
+                                  <b>Nombre: </b>{{producto.NOMBRE}}<br>
+                                  <b>marca: </b>{{producto.MARCA}}<br>
+                                  <b>Descripción: </b>{{producto.DESCRIPCION}}<br>
+                              </span>
+          </div>
+          <div class="part3">
+            <span class="precio">{{producto.PRECIO}} COP</span>
+            <button class="boton" routerLink="/Carrito">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>

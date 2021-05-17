@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicioComprasService} from '../../Repositorio/Servicios/servicio-compras.service';
-import { ActivatedRoute, ParamMap } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 import { CPU } from 'src/app/nucleo/Dominio/CPU';
 import { RAM } from '../../nucleo/Dominio/RAM';
 import { Motherboard } from '../../nucleo/Dominio/Motherboard';
@@ -22,7 +22,7 @@ export class ProductoComponent implements OnInit {
   private idProducto:any;
   
 
-  constructor(private pServicios:ServicioComprasService, private ruta: ActivatedRoute, ) {
+  constructor(private pServicios:ServicioComprasService, private ruta: ActivatedRoute ) {
  
     this.ruta.paramMap.subscribe(id => this.idProducto = id);
     if(this.idProducto.params.id.search("CPU") == 0){
@@ -48,7 +48,7 @@ export class ProductoComponent implements OnInit {
     }
     if(this.idProducto.params.id.search("CHASIS") == 0){
       this.darChasis();
-    }
+    } 
   }
 
   tomarCalificacion(event: any){
@@ -70,7 +70,7 @@ export class ProductoComponent implements OnInit {
                          this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                          this.producto[0].MODELO,this.producto[0].VELOCIDAD,this.producto[0].CANTIDADNUCLEOS,
                          this.producto[0].TAMANOCACHE,this.producto[0].TIPOSOCKET,this.producto[0].GENERACION);
-      console.log(this.pr);
+      
      
    });
   }
@@ -84,7 +84,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new RAM(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].TAMANOMEMORIA,this.producto[0].TIPO,this.producto[0].VELOCIDAD)
-     console.log(this.pr);
+     
    });
   } 
   darMother(){
@@ -97,7 +97,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new Motherboard(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].RANURASMEMORIA,this.producto[0].TECNOLOGIARAM,this.producto[0].TIPOSOCKET)
-                        console.log(this.pr);
+                        
    });
   }
   darGPU(){
@@ -110,7 +110,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new GPU(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].ALMACENAMIENTO,this.producto[0].MARCACHIPSET,this.producto[0].TIPORAM)
-                        console.log(this.pr);
+                        
    });
   }
   darFuente(){
@@ -123,7 +123,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new FuentePoder(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].CERTIFICADO,this.producto[0].FABRICANTE,this.producto[0].POTENCIA,this.producto[0].TIPO)
-                        console.log(this.pr);
+                        
    });
   }
   darDisipador(){
@@ -136,7 +136,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new Disipador(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].SOCKETCPU,this.producto[0].TIPOREFRIGERACION)
-                        console.log(this.pr);
+                        
    });
   }
   darDisco(){
@@ -149,7 +149,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new DiscoDuro(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].CAPACIDAD,this.producto[0].FABRICANTE,this.producto[0].TIPO)
-                        console.log(this.pr);
+                        
    });
   }
   darChasis(){
@@ -162,7 +162,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new Chasis(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].COMPMOTHERBOARD)
-                        console.log(this.pr);
+                        
    });
   }
 

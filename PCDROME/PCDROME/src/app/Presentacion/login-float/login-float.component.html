@@ -1,1 +1,7 @@
-<p>login-float works!</p>
+<form>
+    Correo
+    <input type="text" #correo>
+    Contraseña
+    <input type="text" #contrasena>
+    <button type="submit" (click)="ingresar(correo.value,contrasena.value)">Ingresar</button>
+</form>
