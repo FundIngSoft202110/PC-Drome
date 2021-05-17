@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ServiciosClienteService } from '../../Repositorio/Servicios/servicios-cliente.service'
 @Component({
   selector: 'app-login-float',
   templateUrl: './login-float.component.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFloatComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ClienteSer: ServiciosClienteService) {
+     
+   }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
+    
   }
 
+  ingresar(email: string, contraseña: string){
+    this.ClienteSer.iniciarSesion(email,contraseña);
+  }
 }

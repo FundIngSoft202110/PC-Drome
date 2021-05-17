@@ -23,6 +23,7 @@ import { RecomendacionesComponent } from './Presentacion/recomendaciones/recomen
 import { ResultadosDeBusquedaComponent } from './Presentacion/resultados-de-busqueda/resultados-de-busqueda.component';
 import { ChatComponent } from './Presentacion/chat/chat.component';
 import { ProductoComponent } from './Presentacion/producto/producto.component';
+import { ListaProductosComponent } from './Presentacion/lista-productos/lista-productos.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ProductoComponent } from './Presentacion/producto/producto.component';
     ResultadosDeBusquedaComponent,
     ChatComponent,
     ProductoComponent,
+    ListaProductosComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,101 @@
+.filtros{
+  text-decoration: none;
+  color: #000;
+  float: left;
+  width: 20%;
+  height: 500px;
+  padding: 2%;
+}
+
+.filtro{
+  margin-left: 10%;
+}
+
+.filtro_precio{
+  width: 80px;
+}
+
+.boton_filtros{
+  margin-top: 40px;
+  margin-left: 25%;
+}
+
+.pcs{
+  background-color: #fff;
+  color: #000;
+  margin-right: auto;
+  display: inline-block;
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.subtitulo{
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 2%;
+  margin-top: 20px;
+}
+
+.pc{
+  display: block;
+  height: 200px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.imagen{
+  float: left;
+  height: 200px;
+  margin-left: 5%;
+  width: 25%;
+}
+
+.informacion{
+  display: inline-block;
+  width: 70%;
+}
+
+.descripcion{
+  display: block;
+}
+
+.precio{
+  display: block;
+  padding-bottom: 10px;
+  font-weight: 1000;
+  font-size: 20px;
+}
+
+.boton{
+  display: block;
+}
+
+.espacio{
+  height: 20px;
+}
+
+.part1{
+  margin-top: 30px;
+  display: block;
+  float: left;
+  width: 46%;
+  padding-right: 4%;
+}
+
+.part2{
+  margin-top: 30px;
+  display: block;
+  float: left;
+  width: 46%;
+  padding-right: 4%;
+}
+
+.part3{
+  display: block;
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
