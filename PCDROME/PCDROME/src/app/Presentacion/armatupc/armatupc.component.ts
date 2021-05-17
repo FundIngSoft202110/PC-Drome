@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {GetProcesadoresUsecase} from '../../nucleo/Casos de uso/getProcesadores.usecase';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-armatupc',
@@ -8,8 +10,6 @@ import {GetProcesadoresUsecase} from '../../nucleo/Casos de uso/getProcesadores.
 })
 
 export class ArmatupcComponent implements OnInit{
-  constructor() {
-  }
   ngOnInit(): void {
   }
 }
