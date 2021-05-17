@@ -7,11 +7,6 @@ import {CPU} from '../Dominio/CPU';
   providedIn: 'root'
 })
 export class GetProcesadoresUsecase{
-  procesadores: Array<CPU>;
-  constructor(servicioCompras: ServicioComprasService) {
-    this.procesadores = [];
-  }
-  async obternerProcesadores(): Promise<void> {
-    ServicioComprasService.prototype.getProcesadores();
+  constructor() {
   }
 }

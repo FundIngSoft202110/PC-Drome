@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AngularFirestore} from '@angular/fire/firestore';
+
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,5 @@ import {AngularFirestore} from '@angular/fire/firestore';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PCDROME';
-  constructor(firestore: AngularFirestore) {
-  }
+  
 }

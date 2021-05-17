@@ -1,7 +1,6 @@
 <header>
-  <!--cabezera: Titulo pagina - buscador principal - boton_Ingresar-->
   <div class="cabezera">
-    <a href="index.html" class="titulo">PC-DROME</a>
+    <a routerLink="/" class="titulo">PC-DROME</a>
     <div class="buscador_home">
       <form>
         <input type="search" class="buscador"/>
@@ -9,24 +8,25 @@
       </form>
     </div>
     <div class="sign_in">
-      <a href="registrarse.html" class="ingresar">Ingresar</a>
+      <a routerLink="Ingresar" class="ingresar">Ingresar</a>
     </div>
     <div class="carrito">
-      <a href="carrito.html" class="ingresar">Carrito</a>
+      <a routerLink="Carrito" class="ingresar">Carrito</a>
     </div>
   </div>
 
   <div class="menu_home">
-    <a href="ArmarPC.html" class="menu" id="opcion1">Ensambla tu PC</a>
+    <a routerLink="ArmarPC" class="menu" id="opcion1">Ensambla tu PC</a>
     <span style="color: #502f4c; font-size: 25px; font-weight: bold; float: left;">|</span>
-    <a href="Tienda.html" class="menu">Tienda</a>
-    <span style="color: #502f4c; font-size: 25px; font-weight: bold; float: left">→</span>
-    <a href="Productos.html" class="menu">Motherboards</a>
-    <a href="Productos.html" class="menu">Procesadores</a>
-    <a href="Productos.html" class="menu">Memorias</a>
-    <a href="Productos.html" class="menu">Discos Duros</a>
-    <a href="Productos.html" class="menu">Tarjetas Graficas</a>
-    <a href="Productos.html" class="menu">Disipadores</a>
-    <a href="Productos.html" class="menu">Chasis</a>
+    <a [routerLink]="['/productos','MOTHERBOARD']" class="menu">Motherboards</a>
+    <a [routerLink]="['/productos','CPU']" class="menu">Procesadores</a>
+    <a [routerLink]="['/productos','RAM']" class="menu">Memorias</a>
+    <a [routerLink]="['/productos','DISCODURO']" class="menu">Discos Duros</a>
+    <a [routerLink]="['/productos','GPU']" class="menu">Tarjetas Graficas</a>
+    <a [routerLink]="['/productos','DISIPADOR']" class="menu">Disipadores</a>
+    <a [routerLink]="['/productos','CHASIS']" class="menu">Chasis</a>
   </div>
+
 </header>
+
+

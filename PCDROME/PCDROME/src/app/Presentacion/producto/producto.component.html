@@ -1,1 +1,63 @@
-<p>producto works!</p>
+<main class="margen">
+  <div class="container-fluid">
+    <div class="fondo">
+      <div class="row">
+        <div class="col-4">
+          <div class="imagen">
+            <img src="{{pr.foto}}" width="200px" height="200px" alt="ImagenProducto" class="img-thumbnail">
+          </div>
+        </div>
+
+        <div class="col-8">
+          <div class="tituloProducto" >
+            {{pr.nombre}}
+          </div>
+          <div class="descripcion" >
+            <p>Descripción: {{pr.descripcion}}</p>
+            <p>Marca: {{pr.marca}}</p>
+          </div>
+          <div class="precio">
+            Precio: {{pr.precio}} x UND
+          </div>
+          <button class="botonCo">COMPRAR</button>
+          <button class="botonCa" routerLink="/Carrito">AGREGAR AL CARRITO</button>
+          <div class="cantidad">
+            Cantidad
+            <input type="number" id="quantity" name="quantity" min="1" max="1000">
+          </div>
+        </div>
+        <div class="opiniones">
+         
+           <div class="calificaciones">
+               CALIFICACIÓN
+             <div class = "calificacion">
+   
+               <input type="radio" name="star" id="star5" value="5" (change)="tomarCalificacion($event)">
+               <label for="star5" class="fa fa-star"></label>
+               <input type="radio" name="star" id="star4" value="4" (change)="tomarCalificacion($event)">
+               <label for="star4" class="fa fa-star" ></label>
+               <input type="radio" name="star" id="star3" value="3" (change)="tomarCalificacion($event)">
+               <label for="star3" class="fa fa-star"></label>
+               <input type="radio" name="star" id="star2" value="2" (change)="tomarCalificacion($event)">
+               <label for="star2" class="fa fa-star"></label>
+               <input type="radio" name="star" id="star1" value="1" (change)="tomarCalificacion($event)">
+               <label for="star1" class="fa fa-star"></label>
+   
+             </div>
+           </div>
+         </div> 
+      </div>
+      
+      
+        <div class="comentarios">
+          COMENTARIOS
+          <form>
+            <input class="cTexto" type="text" #t1 placeholder="Escriba aqui su comentario" >
+            <button type="submit" class="btnEnviar" (click)="getValue(t1.value)">Enviar</button>
+            
+          </form>
+        </div>
+       
+    </div>
+  </div>
+</main>
