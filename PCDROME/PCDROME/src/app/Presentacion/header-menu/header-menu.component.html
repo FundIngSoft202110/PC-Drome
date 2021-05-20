@@ -1,32 +1,36 @@
-<header>
-  <div class="cabezera">
-    <a routerLink="/" class="titulo">PC-DROME</a>
-    <div class="buscador_home">
-      <form>
-        <input type="search" class="buscador"/>
-        <button class="boton_buscar">Bucar</button>
-      </form>
-    </div>
-    <div class="sign_in">
-      <a routerLink="Ingresar" class="ingresar">Ingresar</a>
-    </div>
-    <div class="carrito">
-      <a routerLink="Carrito" class="ingresar">Carrito</a>
-    </div>
-  </div>
 
-  <div class="menu_home">
-    <a routerLink="ArmarPC" class="menu" id="opcion1">Ensambla tu PC</a>
-    <span style="color: #502f4c; font-size: 25px; font-weight: bold; float: left;">|</span>
-    <a [routerLink]="['/productos','MOTHERBOARD']" class="menu">Motherboards</a>
-    <a [routerLink]="['/productos','CPU']" class="menu">Procesadores</a>
-    <a [routerLink]="['/productos','RAM']" class="menu">Memorias</a>
-    <a [routerLink]="['/productos','DISCODURO']" class="menu">Discos Duros</a>
-    <a [routerLink]="['/productos','GPU']" class="menu">Tarjetas Graficas</a>
-    <a [routerLink]="['/productos','DISIPADOR']" class="menu">Disipadores</a>
-    <a [routerLink]="['/productos','CHASIS']" class="menu">Chasis</a>
-  </div>
-
-</header>
-
-
+<div id="sup-header-bar" class="sup-header-visible sup-header-hide">
+  <h1 class="col-md-4">PC-Drome Tienda de partes y computadoras pesonalizadas</h1>
+  <span class="col-md-2"><img src="assets/iconos/telefono-col-icon.svg" alt="Icono de telefono colombia.">+57 322-323-6159</span>
+  <ul id="sup-header-menu" class="col-md-4">
+    <li><a mat-button>Ayuda</a></li>
+    <li><a mat-button routerLink="">Rastrea tu orden</a></li>
+    <li><a mat-button routerLink="">Soporte y Garantía</a></li>
+    <li><a mat-button >Español</a></li>
+  </ul>
+</div>
+<mat-divider></mat-divider>
+<div id="search-header-bar">
+  <h2 class="col-md-2">PC-DROME</h2>
+  <form class="search-form" >
+    <mat-form-field class="general-search" class="col-md-6">
+      <mat-label>Busqueda</mat-label>
+      <input matInput placeholder="Ejemplo. Motherboard">
+    </mat-form-field>
+  </form>
+  <ul id="sup-search-menu" class="col-md-3">
+    <li><a mat-button><img src="assets/iconos/carrito-icon.svg" alt="Icono de carrito."></a></li>
+    <li><a mat-button routerLink=""><img src="assets/iconos/persona-icon.svg" alt="Icono de persona.">Mi perfil</a></li>
+  </ul>
+</div>
+<div id="main-menu-bar">
+  <ul id="sup-main-menu" class="col-md-10">
+    <li><a mat-button>Arma tu pc</a></li>
+    <li><span>Tienda →</span></li>
+    <li><a mat-button routerLink="">Motherboard</a></li>
+    <li><a mat-button routerLink="">Memorias</a></li>
+    <li><a mat-button routerLink="">Tarjetas Graficas</a></li>
+    <li><a mat-button routerLink="">Procesadores</a></li>
+    <li><a mat-button routerLink="">Accesorios</a></li>
+  </ul>
+</div>

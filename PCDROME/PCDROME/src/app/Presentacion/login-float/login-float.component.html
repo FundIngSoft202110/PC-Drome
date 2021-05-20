@@ -1,7 +1,32 @@
-<form>
-    Correo
-    <input type="text" #correo>
-    Contraseña
-    <input type="text" #contrasena>
-    <button type="submit" (click)="ingresar(correo.value,contrasena.value)">Ingresar</button>
-</form>
+<main>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form onsubmit="event.preventDefault()" class="box">
+                    <h2>Ingresar</h2>
+                    <label>Correo</label>
+                    <input type="text" name="">
+                    <label>Contraseña</label>
+                    <input type="password" name=""> 
+                    <a class="link al-right" href="#recuperar-contrasena">Olvide mi contraseña</a> 
+                    <input type="submit" name="" value="Iniciar Sesion" href="#">
+                    <a class="link" href="registar.html">¿No tienes cuenta? Regístrate aquí.</a> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="recuperar-contrasena">
+    <div class="card">
+        <form onsubmit="event.preventDefault()" class="box">
+            <h1>Recuperar Contraseña</h1>
+            <h3>Ingrese el correo con el que se registró</h3>
+            <label>Correo registrado</label>
+            <input type="text" name="">
+            <button type="button" name="" href="#">Recuperar Contraseña</button>
+        </form>
+    </div>
+</div>
+</main>
