@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-menu.component.css']
 })
 export class HeaderMenuComponent implements OnInit {
-
-  constructor() { }
-
+  // @ts-ignore
+  public textoUsuario: string;
+  constructor() {
+  }
   ngOnInit(): void {
   }
-
 }

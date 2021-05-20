@@ -1,3 +1,4 @@
+
 <!--<ul>
   <li class="text" *ngFor="let item of items | async">
     {{item.NOMBRE}}
@@ -17,3 +18,37 @@
     </mat-step>
   </mat-horizontal-stepper>
 </mat-card>-->
+<div class="tab-content">
+  <div class="status-select-bar">
+    <p *ngIf="selectedStatusID[0]==-1; else selectedCPU">CPU Selected: Ninguna</p>
+    <ng-template #selectedCPU>
+      CPU Selected: {{selectedStatusID[0]}}
+    </ng-template>
+  </div>
+  <div class="filter-zone">
+  </div>
+  <div class="product-view">
+    <mat-grid-list cols="3" rowHeight="1:1">
+      <mat-grid-tile *ngFor="let itemCPU of CPU | async">
+        <mat-card class="product-card">
+          <mat-card-header>
+            <mat-card-title>{{itemCPU.NOMBRE}}</mat-card-title>
+            <mat-card-subtitle>{{itemCPU.IDPRODUCTO}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image
+               src="{{itemCPU.FOTO}}"
+               alt="Imagen de {{itemCPU.NOMBRE}}">
+          <mat-card-content>
+            <p>
+              {{itemCPU.DESCRIPCION}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>SELECCIONAR</button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </div>
+</div>

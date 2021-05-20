@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {GetProcesadoresUsecase} from '../../nucleo/Casos de uso/getProcesadores.usecase';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
+import {ServicioComprasService} from '../../Repositorio/Servicios/servicio-compras.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-armatupc',
@@ -10,6 +12,26 @@ import {Observable} from 'rxjs';
 })
 
 export class ArmatupcComponent implements OnInit{
+
+  CPU: any;
+  Motherboards: any;
+  RAM: any;
+  Almacenamiento: any;
+  Graficas: any;
+  Disipador: any;
+  Fuente: any;
+  Chasis: any;
+  selectedStatusID: number[] = [-1, -1, -1, -1, -1, -1, -1, -1];
+  constructor(private pServicios: ServicioComprasService, private ruta: ActivatedRoute) {
+    this.CPU = pServicios.retornarItems('CPU');
+    this.RAM = pServicios.darColeccion('RAM');
+    this.Motherboards = pServicios.darColeccion('MOTHERBOARD');
+    this.Almacenamiento = pServicios.darColeccion('DISCODURO');
+    this.Graficas = pServicios.darColeccion('GPU');
+    this.Disipador = pServicios.darColeccion('DISIPADOR');
+    this.Fuente = pServicios.darColeccion('FUENTEPODER');
+    this.Chasis = pServicios.darColeccion('CHASIS');
+  }
   ngOnInit(): void {
   }
 }

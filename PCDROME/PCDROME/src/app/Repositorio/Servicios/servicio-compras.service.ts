@@ -21,97 +21,97 @@ export class ServicioComprasService {
   productos: Observable<any[]>;
 
   constructor(private afs: AngularFirestore) {
-   
+
     this.productos = new Observable<any[]>();
-    
+
   }
 
   retornarItems(nColeccion: string){
     this.darColeccion(nColeccion);
     return this.productos;
   }
-  
+
 
   darColeccion(nColeccion: string){
-    if(nColeccion == "CPU"){
+    if (nColeccion == 'CPU'){
       this.productosCollection = this.afs.collection<CPU>('PROCESADORES');
       this.productos = this.productosCollection.snapshotChanges().pipe(
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as CPU;
           const id = a.payload.doc.id;
-          return {id,...data};
+          return {id, ...data};
         }))
       );
     }
-    if(nColeccion == "RAM"){
+    if (nColeccion == 'RAM'){
       this.productosCollection = this.afs.collection<RAM>('RAM');
       this.productos = this.productosCollection.snapshotChanges().pipe(
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as RAM;
           const id = a.payload.doc.id;
-          return {id,...data};
+          return {id, ...data};
         }))
       );
     }
-    if(nColeccion == "MOTHERBOARD"){
+    if (nColeccion == 'MOTHERBOARD'){
       this.productosCollection = this.afs.collection<Motherboard>('MOTHERBOARD');
       this.productos = this.productosCollection.snapshotChanges().pipe(
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as Motherboard;
           const id = a.payload.doc.id;
-          return {id,...data};
+          return {id, ...data};
         }))
       );
     }
-    if(nColeccion == "GPU"){
+    if (nColeccion == 'GPU'){
       this.productosCollection = this.afs.collection<GPU>('GPU');
       this.productos = this.productosCollection.snapshotChanges().pipe(
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as GPU;
           const id = a.payload.doc.id;
-          return {id,...data};
+          return {id, ...data};
         }))
       );
     }
-    if(nColeccion == "FUENTEPODER"){
+    if (nColeccion == 'FUENTEPODER'){
       this.productosCollection = this.afs.collection<FuentePoder>('FUENTEPODER');
       this.productos = this.productosCollection.snapshotChanges().pipe(
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as FuentePoder;
           const id = a.payload.doc.id;
-          return {id,...data};
+          return {id, ...data};
         }))
       );
     }
-    if(nColeccion == "DISIPADOR"){
+    if (nColeccion == 'DISIPADOR'){
       this.productosCollection = this.afs.collection<Disipador>('DISIPADOR');
       this.productos = this.productosCollection.snapshotChanges().pipe(
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as Disipador;
           const id = a.payload.doc.id;
-          return {id,...data};
+          return {id, ...data};
         }))
       );
     }
-    if(nColeccion == "DISCODURO"){
+    if (nColeccion == 'DISCODURO'){
       this.productosCollection = this.afs.collection<DiscoDuro>('DISCODURO');
       this.productos = this.productosCollection.snapshotChanges().pipe(
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as DiscoDuro;
           const id = a.payload.doc.id;
-          return {id,...data};
+          return {id, ...data};
         }))
       );
     }
-    if(nColeccion == "CHASIS"){
+    if (nColeccion == 'CHASIS'){
       this.productosCollection = this.afs.collection<Chasis>('CHASIS');
       this.productos = this.productosCollection.snapshotChanges().pipe(
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as Chasis;
           const id = a.payload.doc.id;
-          return {id,...data};
+          return {id, ...data};
         }))
       );
     }
-  } 
+  }
 }

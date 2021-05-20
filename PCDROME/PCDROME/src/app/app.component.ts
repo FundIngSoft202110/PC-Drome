@@ -10,11 +10,12 @@ import {DomSanitizer} from '@angular/platform-browser';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+
   title = 'PCDROME';
   //items: Observable<any[]>;
   // @ts-ignore
   constructor(firestore: AngularFirestore){
     //this.items = firestore.collection('PROCESADORES').valueChanges();
   }
+
 }
