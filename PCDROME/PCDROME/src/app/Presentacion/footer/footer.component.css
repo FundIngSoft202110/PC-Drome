@@ -1,4 +1,5 @@
 #sup-footer-bar{
+  padding-left: 32%;
   background-color: #502f4c;
   color: white;
 }
@@ -6,7 +7,6 @@
   display:inline;
   padding-left:3px;
   padding-right:3px;
-  font-family: Roboto;
   font-style: normal;
 }
 #sup-footer-bar span, h2{
@@ -14,10 +14,4 @@
 }
 #sup-header-menu{
   display: inline;
-=======
-footer{
-    background-color: #502f4c;
-    display: block;
-    color: #fff;
-  margin-top: 20px;
-  }
+}

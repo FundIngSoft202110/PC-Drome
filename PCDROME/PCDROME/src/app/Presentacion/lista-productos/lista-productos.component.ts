@@ -48,7 +48,9 @@ export class ListaProductosComponent implements OnInit {
   
   darProducto(tipo: string){ 
     this.serProductos.retornarItems(tipo).subscribe(items => {
-      this.productos = items  
+      this.productos = items
+      console.log(this.productos);
+         
    });
   }
 }

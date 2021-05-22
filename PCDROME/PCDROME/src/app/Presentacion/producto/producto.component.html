@@ -30,7 +30,6 @@
          
            <div class="calificaciones">
                CALIFICACIÓN
-               <span class="promedio">{{promedio}}</span>
              <div class = "calificacion">
    
                <input type="radio" name="star" id="star5" value="5" (change)="tomarCalificacion($event)">
@@ -49,21 +48,14 @@
          </div> 
       </div>
       
+      
         <div class="comentarios">
           COMENTARIOS
           <form>
             <input class="cTexto" type="text" #t1 placeholder="Escriba aqui su comentario" >
-            <a class="btnEnviar" (click)="getValue(t1.value)">Enviar</a>
+            <button type="submit" class="btnEnviar" (click)="getValue(t1.value)">Enviar</button>
             
           </form>
-
-          <div class="secComentarios" *ngFor="let comentario of comentarios">
-            <span>
-              <b>Usuario: </b>{{comentario.IDUSUARIO}}<br>
-              <b>Calificación: </b>{{comentario.CALIFICACION}}<br>
-              <b></b>{{comentario.COMENTARIO}}<br>
-          </span>
-          </div>
         </div>
        
     </div>

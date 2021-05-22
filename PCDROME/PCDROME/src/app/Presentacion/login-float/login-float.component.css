@@ -1,117 +1,123 @@
+.container{
+  display: block;
+  margin-top: 20px;
+  margin-left: 34%;
+}
+
 .card {
-    border: 1px
+  border: 1px
 }
 
 .box {
-    width: 500px;
-    padding: 40px;
-    position: absolute;
-    background: white;
-    text-align: center;
-    transition: 0.25s;
- 
+  display: block;
+  width: 400px;
+  padding: 40px;
+  background: white;
+  text-align: center;
+  transition: 0.25s;
+
 }
 
 .box input[type="text"],
 .box input[type="password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    margin-top: 0px;
-    text-align: center;
-    border-left: transparent;
-    border-right: transparent;
-    border-top: transparent;
-    border-bottom: 2px solid #502f4c;
-    padding: 10px 10px;
-    width: 250px;
-    outline: none;
-    color: #502f4c;
-    transition: 0.25s
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  margin-top: 0px;
+  text-align: center;
+  border-left: transparent;
+  border-right: transparent;
+  border-top: transparent;
+  border-bottom: 2px solid #502f4c;
+  padding: 10px 10px;
+  width: 250px;
+  outline: none;
+  color: #502f4c;
+  transition: 0.25s
 }
 
 .box h2, h1, h3 {
-    color: #502f4c;
-    font-weight: bold;
+  color: #502f4c;
+  font-weight: bold;
 }
 
 .box label {
-    display: block;
-    margin: 0px auto;
-    text-align: left;
-    color: #502f4c;
-    font-weight: bold;
-    padding: 10px 10px;
-    padding-bottom: 0px;
-    width: 250px;
-    outline: none;
+  display: block;
+  margin: 0px auto;
+  text-align: left;
+  color: #502f4c;
+  font-weight: bold;
+  padding: 10px 10px;
+  padding-bottom: 0px;
+  width: 250px;
+  outline: none;
 }
 
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
-    width: 280px;
-    border-color: rgba(112,88,124,1.0)
+  width: 280px;
+  border-color: rgba(112,88,124,1.0)
 }
 
 .box input[type="submit"] {
-    border: 0;
-    background: #502f4c;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #502f4c;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer
+  border: 0;
+  background: #502f4c;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #502f4c;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer
 }
 
 .box input[type="submit"]:hover {
-    background: rgba(112,88,124,1.0)
+  background: rgba(112,88,124,1.0)
 }
 
 .link {
-    text-decoration: none;
-    font-weight: bold;
-    color: #502f4c
+  text-decoration: none;
+  font-weight: bold;
+  color: #502f4c
 }
 
 a.link:hover {
-    text-decoration: underline
+  text-decoration: underline
 }
 
 .al-right {
-    display: block;
-    margin: 0px auto;
-    text-align: right;
-    width: 250px;
-    outline: none;
+  display: block;
+  margin: 0px auto;
+  text-align: right;
+  width: 250px;
+  outline: none;
 }
 
 .box button {
-    border: 0;
-    background: #502f4c;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #502f4c;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer
+  border: 0;
+  background: #502f4c;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #502f4c;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer
 }
 
 .box button:hover {
-    background: rgba(112,88,124,1.0)
+  background: rgba(112,88,124,1.0)
 }
 
 .pad {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

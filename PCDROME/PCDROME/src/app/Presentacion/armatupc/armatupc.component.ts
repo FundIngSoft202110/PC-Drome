@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {GetProcesadoresUsecase} from '../../nucleo/Casos de uso/getProcesadores.usecase';
-import {AngularFirestore} from '@angular/fire/firestore';
-import {Observable} from 'rxjs';
 import {ServicioComprasService} from '../../Repositorio/Servicios/servicio-compras.service';
 import {ActivatedRoute} from '@angular/router';
 
@@ -12,7 +9,6 @@ import {ActivatedRoute} from '@angular/router';
 })
 
 export class ArmatupcComponent implements OnInit{
-
   CPU: any;
   Motherboards: any;
   RAM: any;
