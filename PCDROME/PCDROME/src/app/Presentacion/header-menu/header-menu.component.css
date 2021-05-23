@@ -25,6 +25,7 @@
   display: block;
   float: right!important;
   margin-top: 9px;
+  margin-left: 20px;
 }
 
 .ingresar{
@@ -76,7 +77,6 @@
 .carrito{
   display: block;
   float: right;
-  margin-right: 5%;
   margin-top: 9px;
 }
 

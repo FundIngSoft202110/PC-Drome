@@ -21,9 +21,7 @@ export class ServicioComprasService {
   productos: Observable<any[]>;
 
   constructor(private afs: AngularFirestore) {
-
     this.productos = new Observable<any[]>();
-
   }
 
   retornarItems(nColeccion: string){

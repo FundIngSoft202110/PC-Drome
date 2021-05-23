@@ -7,8 +7,14 @@
         <button class="boton_buscar">Bucar</button>
       </form>
     </div>
-    <div class="sign_in">
+    <div *ngIf="mostrarI" class="sign_in" style="padding-left: 30px">
       <a routerLink="Ingresar" class="ingresar">Ingresar</a>
+    </div>
+    <div *ngIf="mostrarP" class="sign_in">
+      <a routerLink="Perfil" class="ingresar">Perfil</a>
+    </div>
+    <div *ngIf="mostrarL" class="sign_in">
+      <a (click)="logOut()" routerLink="/" class="ingresar">Log Out</a>
     </div>
     <div class="carrito">
       <a routerLink="Carrito" class="ingresar">Carrito</a>

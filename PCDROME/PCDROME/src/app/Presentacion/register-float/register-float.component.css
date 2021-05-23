@@ -12,7 +12,7 @@
   width: 400px;
 }
 
-.box input[type="text"] {
+.box input {
   border: 0;
   background: none;
   display: block;
@@ -57,7 +57,7 @@ a.link:hover {
   text-decoration: underline
 }
 
-.box input[type="text"]:focus {
+.box input:focus {
   width: 280px;
   border-color: rgba(112,88,124,1.0)
 }
