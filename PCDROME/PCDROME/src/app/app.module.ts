@@ -25,6 +25,7 @@ import { ChatComponent } from './Presentacion/chat/chat.component';
 import { ProductoComponent } from './Presentacion/producto/producto.component';
 import { ListaProductosComponent } from './Presentacion/lista-productos/lista-productos.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { ListaProductosComponent } from './Presentacion/lista-productos/lista-pr
     ChatComponent,
     ProductoComponent,
     ListaProductosComponent,
+    
   ],
   imports: [
     BrowserModule,
