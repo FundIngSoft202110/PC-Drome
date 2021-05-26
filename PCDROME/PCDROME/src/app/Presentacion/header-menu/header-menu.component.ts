@@ -14,11 +14,13 @@ export class HeaderMenuComponent implements OnInit {
   public mostrarI: boolean;
   public mostrarP: boolean;
   public mostrarL: boolean;
+  private busqueda: string;
 
   constructor(public sc: ServiciosClienteService) {
     this.mostrarI = true;
     this.mostrarP = false;
     this.mostrarL = false;
+    this.busqueda = "";
   }
 
   ngOnInit(): void {
@@ -41,5 +43,10 @@ export class HeaderMenuComponent implements OnInit {
     this.mostrarI = true;
     this.mostrarP = false;
     this.mostrarL = false;
+  }
+
+  tomarDato(busqueda: string){
+    this.busqueda = busqueda.toUpperCase();
+    console.log(this.busqueda);
   }
 }

@@ -3,8 +3,8 @@
     <a routerLink="/" class="titulo">PC-DROME</a>
     <div class="buscador_home">
       <form>
-        <input type="search" class="buscador"/>
-        <button class="boton_buscar">Bucar</button>
+        <input type="search" class="buscador" #buscador/>
+        <button class="boton_buscar" (click)="tomarDato(buscador.value)">Buscar</button>
       </form>
     </div>
     <div *ngIf="mostrarI" class="sign_in" style="padding-left: 30px">

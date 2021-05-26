@@ -29,9 +29,9 @@ export class ProductoComponent implements OnInit {
   private comentario: string;
   public comentarios: any;
   promedio: number;
-  
+
   constructor(private pServicios:ServicioComprasService, private ruta: ActivatedRoute, private cServicio: ServiciosClienteService, private cliServicio: ServiciosCalificarService) {
-    
+
     this.promedio = 0;
     this.calif = 0;
     this.comentario = "";
@@ -68,23 +68,23 @@ export class ProductoComponent implements OnInit {
     if(this.idProducto.params.id.search("CHASIS") == 0){
       this.darChasis();
       this.darComentarios();
-    } 
-    
+    }
+
   }
 
   tomarCalificacion(event: any){
     this.calif = event.target.value;
-    
+
   }
 
   getValue(value: string){
     this.comentario = value;
     this.agregarComentario();
-    
+
   }
 
   agregarComentario(){
-        
+
     var iDu: any;
     if(this.calif == 0 || this.comentario == ""){
     }
@@ -92,31 +92,36 @@ export class ProductoComponent implements OnInit {
       this.cServicio.darUsuarioAct().then(user => {
       if(user){
         iDu = user.email;
-        this.cliServicio.agregarComentario(JSON.parse(JSON.stringify(new Comentario(this.calif,this.comentario,this.producto[0].id,iDu)))); 
-      } 
+        this.cliServicio.agregarComentario(JSON.parse(JSON.stringify(new Comentario(this.calif,this.comentario,this.producto[0].id,iDu))));
+      }
       });
     }
   }
 
   darComentarios(){
-      
+
     this.cliServicio.retornarComentarios().subscribe(coms => {
-      
+
       this.comentarios = coms.filter((com: { IDPRODUCTO: any; }) => com.IDPRODUCTO == this.producto[0].id);
       var cals = coms.filter((com: { IDPRODUCTO: any; }) => com.IDPRODUCTO == this.producto[0].id)
-          .map(n => n.CALIFICACION)
+          .map(n => n.CALIFICACION);
       cals.forEach(element => {
         this.promedio += element;
       });
-      this.promedio = this.promedio / cals.length;
-    
+      // tslint:disable-next-line:triple-equals
+      if(!isNaN(this.promedio)){
+        this.promedio = this.promedio / cals.length;
+      }
+      else{
+        this.promedio = 0;
+      }
     })
   }
 
 
   darCPU(){
     this.pr = new CPU("Nombre",0,0,"marca","descripcion","foto",0,"modelo",0,"nucleos","cache","socket","generacion");
-    
+
     this.pServicios.retornarItems("CPU").subscribe(items => {
       this.items = items
       this.producto = this.items.filter((cpu: { id: string; }) => cpu.id == this.idProducto.params.id)
@@ -125,8 +130,8 @@ export class ProductoComponent implements OnInit {
                          this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                          this.producto[0].MODELO,this.producto[0].VELOCIDAD,this.producto[0].CANTIDADNUCLEOS,
                          this.producto[0].TAMANOCACHE,this.producto[0].TIPOSOCKET,this.producto[0].GENERACION);
-      
-     
+
+
    });
   }
    darRAM(){
@@ -139,9 +144,9 @@ export class ProductoComponent implements OnInit {
       this.pr = new RAM(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].TAMANOMEMORIA,this.producto[0].TIPO,this.producto[0].VELOCIDAD)
-     
+
    });
-  } 
+  }
   darMother(){
     this.pr = new Motherboard("Nombre",0,0,"marca","descripcion","foto",0,0,"tecRam","tSocket");
 
@@ -152,7 +157,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new Motherboard(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].RANURASMEMORIA,this.producto[0].TECNOLOGIARAM,this.producto[0].TIPOSOCKET)
-                        
+
    });
   }
   darGPU(){
@@ -165,7 +170,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new GPU(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].ALMACENAMIENTO,this.producto[0].MARCACHIPSET,this.producto[0].TIPORAM)
-                        
+
    });
   }
   darFuente(){
@@ -178,7 +183,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new FuentePoder(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].CERTIFICADO,this.producto[0].FABRICANTE,this.producto[0].POTENCIA,this.producto[0].TIPO)
-                        
+
    });
   }
   darDisipador(){
@@ -191,7 +196,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new Disipador(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].SOCKETCPU,this.producto[0].TIPOREFRIGERACION)
-                        
+
    });
   }
   darDisco(){
@@ -204,7 +209,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new DiscoDuro(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].CAPACIDAD,this.producto[0].FABRICANTE,this.producto[0].TIPO)
-                        
+
    });
   }
   darChasis(){
@@ -217,7 +222,7 @@ export class ProductoComponent implements OnInit {
       this.pr = new Chasis(this.producto[0].NOMBRE,this.producto[0].IDPRODUCTO,this.producto[0].PRECIO,
                         this.producto[0].MARCA,this.producto[0].DESCRIPCION,this.producto[0].FOTO,this.producto[0].DESCUENTO,
                         this.producto[0].COMPMOTHERBOARD)
-                        
+
    });
   }
 
