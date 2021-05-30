@@ -3,6 +3,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {ServiciosClienteService} from '../../Repositorio/Servicios/servicios-cliente.service';
 import {tokenReference} from '@angular/compiler';
 import {Router, NavigationEnd} from "@angular/router";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-header-menu',
@@ -18,7 +19,7 @@ export class HeaderMenuComponent implements OnInit {
   private busqueda: string;
 
   constructor(public sc: ServiciosClienteService,
-              public router: Router) {
+              public router: Router,public form: FormBuilder) {
     this.busqueda = '';
     this.mostrarI = true;
     this.mostrarP = false;
@@ -30,6 +31,10 @@ export class HeaderMenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  formulario = this.form.group({
+    busqueda: ['']
+  })
 
   async verificar() {
     const user = await this.sc.getUid();
@@ -58,9 +63,8 @@ export class HeaderMenuComponent implements OnInit {
       console.log(error.code);
     });
   }
-
-  tomarDato(busqueda: string){
-    this.busqueda = busqueda.toUpperCase();
-    console.log(this.busqueda);
+  buscar(){
+    this.router.navigate(['Buscar',this.formulario.value.busqueda]);
   }
+
 }

@@ -2,9 +2,9 @@
   <div class="cabezera">
     <a routerLink="/" class="titulo">PC-DROME</a>
     <div class="buscador_home">
-      <form>
-        <input type="search" class="buscador" #buscador/>
-        <button class="boton_buscar" (click)="tomarDato(buscador.value)">Buscar</button>
+      <form (submit)="buscar()" [formGroup]="formulario">
+        <input type="search" class="buscador" formControlName="busqueda"/>
+        <input type="submit"   class="boton_buscar" value="Buscar">
       </form>
     </div>
 

@@ -26,6 +26,7 @@ export class ServicioComprasService {
 
   private productosCollection!: AngularFirestoreCollection<any>;
   productos: Observable<any[]>;
+  busqueda: Observable<any[]>[];
   // @ts-ignore
   private pedido: Pedido;
   // @ts-ignore
@@ -33,6 +34,7 @@ export class ServicioComprasService {
 
   constructor(private afs: AngularFirestore) {
     this.productos = new Observable<any[]>();
+    this.busqueda = [];
     this.i = 0;
   }
 
@@ -163,4 +165,40 @@ export class ServicioComprasService {
 
   loadCar(iduser: string){
   }
+
+  buscarProducto(consulta: string){
+    this.busqueda = [];
+    const tProductos = ["PROCESADORES","CHASIS","DISCODURO","DISIPADOR","FUENTEPODER","GPU","MOTHERBOARD","RAM"];
+    console.log("consulta a realizar " + consulta)
+
+    tProductos.forEach(cat => {
+      this.busqueda.push(this.afs.collection( cat, ref => ref.where('MARCA', '==',consulta)
+      ).snapshotChanges().pipe(
+        map(actions => actions.map(a => {
+          const data = a.payload.doc.data() as Producto;
+          const id = a.payload.doc.id;
+          return {id, ...data};
+        }))))
+    })
+    tProductos.forEach(cat => {
+      this.busqueda.push(this.afs.collection( cat, ref => ref.where('NOMBRE', '==',consulta)
+      ).snapshotChanges().pipe(
+        map(actions => actions.map(a => {
+          const data = a.payload.doc.data() as Producto;
+          const id = a.payload.doc.id;
+          return {id, ...data};
+        }))))
+    })
+    tProductos.forEach(cat => {
+      this.busqueda.push(this.afs.collection( cat, ref => ref.where('DESCRIPCION', '==',consulta)
+      ).snapshotChanges().pipe(
+        map(actions => actions.map(a => {
+          const data = a.payload.doc.data() as Producto;
+          const id = a.payload.doc.id;
+          return {id, ...data};
+        }))))
+    })
+    return this.busqueda;
+  }
+
 }

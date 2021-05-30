@@ -9,6 +9,7 @@ import { ProductoComponent } from './Presentacion/producto/producto.component';
 import { RecomendacionesComponent } from './Presentacion/recomendaciones/recomendaciones.component';
 import {RegisterFloatComponent} from './Presentacion/register-float/register-float.component';
 import {PerfilDeUsuarioComponent} from './Presentacion/perfil-de-usuario/perfil-de-usuario.component';
+import { ResultadosDeBusquedaComponent} from './Presentacion/resultados-de-busqueda/resultados-de-busqueda.component'
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'Ingresar', component: LoginFloatComponent},
   {path: 'productos/:nombre', component: ListaProductosComponent},
   {path: 'Ingresar/registrarse', component: RegisterFloatComponent},
-  {path: 'Perfil', component: PerfilDeUsuarioComponent}
+  {path: 'Perfil', component: PerfilDeUsuarioComponent},
+  {path: 'Buscar/:busqueda', component: ResultadosDeBusquedaComponent}
 
 ];
 
