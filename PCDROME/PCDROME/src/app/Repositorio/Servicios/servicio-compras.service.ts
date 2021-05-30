@@ -10,6 +10,12 @@ import { FuentePoder } from '../../nucleo/Dominio/FuentePoder';
 import { Disipador } from '../../nucleo/Dominio/Disipador';
 import { DiscoDuro } from '../../nucleo/Dominio/DiscoDuro';
 import { Chasis } from '../../nucleo/Dominio/Chasis';
+import { Pedido, ProductoPedido } from '../../nucleo/Dominio/Pedido';
+import {Producto} from '../../nucleo/Dominio/producto';
+import 'firebase/firestore';
+import firebase from 'firebase';
+import {ProductoComponent} from '../../Presentacion/producto/producto.component';
+import {PagarPedidoComponent} from "../../Presentacion/pagar-pedido/pagar-pedido.component";
 
 
 @Injectable({
@@ -17,11 +23,17 @@ import { Chasis } from '../../nucleo/Dominio/Chasis';
 })
 
 export class ServicioComprasService {
+
   private productosCollection!: AngularFirestoreCollection<any>;
   productos: Observable<any[]>;
+  // @ts-ignore
+  private pedido: Pedido;
+  // @ts-ignore
+  private i: number;
 
   constructor(private afs: AngularFirestore) {
     this.productos = new Observable<any[]>();
+    this.i = 0;
   }
 
   retornarItems(nColeccion: string){
@@ -111,5 +123,44 @@ export class ServicioComprasService {
         }))
       );
     }
+  }
+
+  addProductcar( producto: string, iduser: string ){
+    console.log('Añadiendo producto...' + producto);
+    const db = firebase.firestore();
+    const docRefcar = db.collection('Usuarios').doc(iduser).collection('carrito').doc('CPU-4');
+    const cpedido: ProductoPedido = {
+      idProducto: producto,
+      cantidad: 0
+    };
+
+    docRefcar.get().then((doc) => {
+      if (doc.exists) {
+        console.log('IF');
+        console.log('Document data:', doc.data());
+        cpedido.cantidad = 2;
+        docRefcar.set(cpedido).then(() => {
+          console.log('Document successfully written! of ' + producto);
+        })
+          .catch((error) => {
+            console.error('Error writing document CPU-4: ', error);
+          });
+      } else {
+        console.log('ELSE');
+        cpedido.cantidad++;
+        docRefcar.set(cpedido).then(() => {
+          console.log('Document successfully written! of ' + producto);
+        })
+          .catch((error) => {
+            console.error('Error writing document' + producto + ': ', error);
+          });
+        console.log('No such document!');
+      }
+    }).catch((error) => {
+      console.log('Error getting document:', error);
+    });
+  }
+
+  loadCar(iduser: string){
   }
 }

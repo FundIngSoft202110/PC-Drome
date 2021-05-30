@@ -1,4 +1,9 @@
+main{
+  display: block;
+  height: auto;
+}
 .filtros{
+  display: block;
   text-decoration: none;
   color: #000;
   float: left;
@@ -17,7 +22,14 @@
 
 .boton_filtros{
   margin-top: 40px;
-  margin-left: 25%;
+  margin-left: 5%;
+  width: 100px;
+}
+
+.boton_limpiar{
+  margin-top: 40px;
+  margin-left: 10px;
+  width: 100px;
 }
 
 .pcs{

@@ -1,4 +1,4 @@
-<header>
+<header (mousewheel)="verificar()">
   <div class="cabezera">
     <a routerLink="/" class="titulo">PC-DROME</a>
     <div class="buscador_home">
@@ -7,6 +7,7 @@
         <button class="boton_buscar" (click)="tomarDato(buscador.value)">Buscar</button>
       </form>
     </div>
+
     <div *ngIf="mostrarI" class="sign_in" style="padding-left: 30px">
       <a routerLink="Ingresar" class="ingresar">Ingresar</a>
     </div>
@@ -14,7 +15,7 @@
       <a routerLink="Perfil" class="ingresar">Perfil</a>
     </div>
     <div *ngIf="mostrarL" class="sign_in">
-      <a (click)="logOut()" routerLink="/" class="ingresar">Log Out</a>
+      <a (click)="logOut()" class="ingresar">Log Out</a>
     </div>
     <div class="carrito">
       <a routerLink="Carrito" class="ingresar">Carrito</a>

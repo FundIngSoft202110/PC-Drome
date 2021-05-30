@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {ServiciosClienteService} from '../../Repositorio/Servicios/servicios-cliente.service';
 import {tokenReference} from '@angular/compiler';
+import {Router, NavigationEnd} from "@angular/router";
 
 @Component({
   selector: 'app-header-menu',
@@ -16,22 +17,29 @@ export class HeaderMenuComponent implements OnInit {
   public mostrarL: boolean;
   private busqueda: string;
 
-  constructor(public sc: ServiciosClienteService) {
+  constructor(public sc: ServiciosClienteService,
+              public router: Router) {
+    this.busqueda = '';
     this.mostrarI = true;
     this.mostrarP = false;
     this.mostrarL = false;
-    this.busqueda = "";
+    this.router.events.subscribe((ev) => {
+      if (ev instanceof NavigationEnd) { this.verificar(); }
+    });
   }
 
   ngOnInit(): void {
-
   }
 
   async verificar() {
-    const user = this.sc.getUid();
-    if (await user == "1") {
+    const user = await this.sc.getUid();
+    if (user === '1') {
+      this.mostrarI = true;
+      this.mostrarP = false;
+      this.mostrarL = false;
       console.log('--> No hay una sesion iniciada');
     } else {
+      console.log('--> Si hay una sesion iniciada');
       this.mostrarP = true;
       this.mostrarL = true;
       this.mostrarI = false;
@@ -39,10 +47,16 @@ export class HeaderMenuComponent implements OnInit {
   }
 
   logOut(){
-    this.sc.cerrarSesion();
     this.mostrarI = true;
     this.mostrarP = false;
     this.mostrarL = false;
+    this.sc.cerrarSesion().then((userCredential) => {
+      this.router.navigate(['/']);
+    }).catch((error) => {
+      console.log('Error: ');
+      console.log(error.message);
+      console.log(error.code);
+    });
   }
 
   tomarDato(busqueda: string){

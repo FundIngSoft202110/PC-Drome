@@ -56,3 +56,25 @@
   padding-top: 10px;
   padding-bottom: 3px;
 }
+
+.producto{
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: aqua;
+}
+
+.imagen{
+  display: block;
+  background-color: #9f83c1;
+}
+
+.desc{
+  display: block;
+  background-color: #502f4c;
+}
+
+.precio{
+  display: block;
+  background-color: blue;
+}

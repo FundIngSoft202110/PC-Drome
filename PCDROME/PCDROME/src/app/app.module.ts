@@ -24,6 +24,7 @@ import { ResultadosDeBusquedaComponent } from './Presentacion/resultados-de-busq
 import { ChatComponent } from './Presentacion/chat/chat.component';
 import { ProductoComponent } from './Presentacion/producto/producto.component';
 import { ListaProductosComponent } from './Presentacion/lista-productos/lista-productos.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -45,7 +46,7 @@ import { ListaProductosComponent } from './Presentacion/lista-productos/lista-pr
     ChatComponent,
     ProductoComponent,
     ListaProductosComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -53,7 +54,8 @@ import { ListaProductosComponent } from './Presentacion/lista-productos/lista-pr
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

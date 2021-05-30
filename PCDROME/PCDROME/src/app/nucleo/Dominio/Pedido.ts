@@ -2,11 +2,10 @@ import {Producto} from './producto';
 
 export interface Pedido{
   id: string;
-  productos: productPedido[];
+  productos: ProductoPedido[];
 }
 
-// tslint:disable-next-line:class-name
-interface productPedido{
-  producto: Producto;
+export interface ProductoPedido{
+  idProducto: string;
   cantidad: number;
 }

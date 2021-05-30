@@ -8,6 +8,7 @@ import { LoginFloatComponent } from './Presentacion/login-float/login-float.comp
 import { ProductoComponent } from './Presentacion/producto/producto.component';
 import { RecomendacionesComponent } from './Presentacion/recomendaciones/recomendaciones.component';
 import {RegisterFloatComponent} from './Presentacion/register-float/register-float.component';
+import {PerfilDeUsuarioComponent} from './Presentacion/perfil-de-usuario/perfil-de-usuario.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,7 +18,9 @@ const routes: Routes = [
   {path: 'Carrito', component: CarritoDeComprasComponent},
   {path: 'Ingresar', component: LoginFloatComponent},
   {path: 'productos/:nombre', component: ListaProductosComponent},
-  {path: 'Ingresar/registrarse', component: RegisterFloatComponent}
+  {path: 'Ingresar/registrarse', component: RegisterFloatComponent},
+  {path: 'Perfil', component: PerfilDeUsuarioComponent}
+
 ];
 
 @NgModule({

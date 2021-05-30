@@ -30,7 +30,8 @@ export class ProductoComponent implements OnInit {
   public comentarios: any;
   promedio: number;
 
-  constructor(private pServicios:ServicioComprasService, private ruta: ActivatedRoute, private cServicio: ServiciosClienteService, private cliServicio: ServiciosCalificarService) {
+  constructor(private pServicios:ServicioComprasService, private ruta: ActivatedRoute,
+              private cServicio: ServiciosClienteService, private cliServicio: ServiciosCalificarService) {
 
     this.promedio = 0;
     this.calif = 0;

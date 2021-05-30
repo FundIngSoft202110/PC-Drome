@@ -1,39 +1,40 @@
 <main>
   <div class="espacio"></div>
   <div class="filtros">
-    <form style="margin-left: 5%;">
+    <form (submit)="filtrar()" [formGroup]="filterForm" style="margin-left: 5%;">
       <!--Procesador-->
       <h3>Procesador</h3>
       <span class="filtro">
-        <input type="radio" name="CPU"/>Intel
+        <input type="radio" name="CPU" formControlName="CPU" value="Intel"/>Intel
       </span>
       <br>
       <span class="filtro">
-        <input type="radio" name="CPU"/>AMD
+        <input type="radio" name="CPU" formControlName="CPU" value="AMD" id="amd"/>AMD
       </span>
 
       <!--RAM-->
       <h3>RAM</h3>
       <span class="filtro">
-        <input type="radio" name="RAM"/>8 GB
+        <input type="radio" name="RAM" formControlName="RAM" value="8"/>8 GB
       </span>
       <br>
       <span class="filtro">
-        <input type="radio" name="RAM"/>16 GB o mas
+        <input type="radio" name="RAM" formControlName="RAM" value="16"/>16 GB o mas
       </span>
 
       <!--Precio-->
       <h3>Precio</h3>
       <span class="filtro">
-        <input type="number" name="precio" placeholder="Minimo" class="filtro_precio"/> -
-        <input type="number" name="precio" placeholder="Maximo" class="filtro_precio"/>
+        <input type="number" name="minP" formControlName="minP" placeholder="Minimo" class="filtro_precio"/> -
+        <input type="number" name="maxP" formControlName="maxP" placeholder="Maximo" class="filtro_precio"/>
       </span>
-      <button class="boton_filtros">Aplicar filtros</button>
+      <input type="submit" class="boton_filtros" value="Aplicar filtros" />
+      <input type="reset" value="Limpiar" class="boton_limpiar">
     </form>
   </div>
   <div class="pcs">
     <span class="subtitulo">Computadores de gama media</span>
-    <div class="pc">
+    <div *ngIf="pc1" class="pc">
       <div class="imagen">
         <img src="./assets/PC.jpg" width="90%" height="200px">
       </div>
@@ -56,11 +57,11 @@
         </div>
         <div class="part3">
           <span class="precio">$1.766.000 COP</span>
-          <button (click)="addCarritorecom1"  class="boton">Agregar al carrito</button>
+          <button (click)="addCarritorecom1()"  class="boton">Agregar al carrito</button>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div *ngIf="pc2" class="pc">
       <div class="imagen">
         <img src="./assets/PC.jpg" width="90%" height="200px">
       </div>
@@ -83,11 +84,11 @@
         </div>
         <div class="part3">
           <span class="precio">$2.268.000 COP</span>
-          <button class="boton">Agregar al carrito</button>
+          <button (click)="addCarritorecom2()" class="boton">Agregar al carrito</button>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div *ngIf="pc3" class="pc">
       <div class="imagen">
         <img src="./assets/PC.jpg" width="90%" height="200px">
       </div>
@@ -110,12 +111,12 @@
         </div>
         <div class="part3">
           <span class="precio">$3.461.000 COP</span>
-          <button class="boton">Agregar al carrito</button>
+          <button (click)="addCarritorecom3()" class="boton">Agregar al carrito</button>
         </div>
       </div>
     </div>
     <span class="subtitulo">Computadores de gama alta</span>
-    <div class="pc">
+    <div *ngIf="pc4" class="pc">
       <div class="imagen">
         <img src="./assets/PC.jpg" width="90%" height="200px">
       </div>
@@ -142,14 +143,14 @@
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div *ngIf="pc5" class="pc">
       <div class="imagen">
         <img src="./assets/PC.jpg" width="90%" height="200px">
       </div>
       <div class="informacion">
         <div class="part1">
           <span class="descripcion">
-              <b>Procesador: </b>i9 10900K<br>
+              <b>Procesador: </b>AMD Ryzen R7 5800X<br>
               <b>RAM: </b>DDR4 32G 3200MHZ Kingston Hyper-x<br>
               <b>Disco duro: </b>Western Digital Green SSD 2 TB<br>
               <b>Motherboard: </b>ASUS B460<br>
