@@ -110,13 +110,17 @@ export class ProductoComponent implements OnInit {
         this.promedio += element;
       });
       // tslint:disable-next-line:triple-equals
-      if(!isNaN(this.promedio)){
-        this.promedio = this.promedio / cals.length;
-      }
-      else{
-        this.promedio = 0;
-      }
+      this.promedioCalificaciones(cals.length);
     })
+  }
+
+  promedioCalificaciones(cantidad: number){
+    if(!isNaN(this.promedio)){
+      this.promedio = this.promedio / cantidad;
+    }
+    else{
+      this.promedio = 0;
+    }
   }
 
 

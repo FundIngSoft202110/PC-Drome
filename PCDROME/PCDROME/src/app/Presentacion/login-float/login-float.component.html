@@ -6,11 +6,11 @@
           <form onsubmit="event.preventDefault()" class="box">
             <h2>Ingresar</h2>
             <label>Correo</label>
-            <input type="text" #email>
+            <input id="textCorreo" type="text" #email>
             <label>Contraseña</label>
-            <input type="password" #password>
-            <input (click)="ingresar(email.value, password.value)" type="submit" value="Iniciar Sesion">
-            <a class="link" routerLink="registrarse">¿No tienes cuenta? Regístrate aquí.</a>
+            <input id="textPassword" type="password" #password>
+            <input id="btnIngresar" (click)="ingresar(email.value, password.value)" type="submit" value="Iniciar Sesion">
+            <a id="btnRegister" class="link" routerLink="registrarse">¿No tienes cuenta? Regístrate aquí.</a>
           </form>
         </div>
       </div>

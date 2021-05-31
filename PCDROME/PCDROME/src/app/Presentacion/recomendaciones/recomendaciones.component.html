@@ -5,30 +5,30 @@
       <!--Procesador-->
       <h3>Procesador</h3>
       <span class="filtro">
-        <input type="radio" name="CPU" formControlName="CPU" value="Intel"/>Intel
+        <input id="tipoIntel" type="radio" name="CPU" formControlName="CPU" value="Intel"/>Intel
       </span>
       <br>
       <span class="filtro">
-        <input type="radio" name="CPU" formControlName="CPU" value="AMD" id="amd"/>AMD
+        <input id="tipoamd" type="radio" name="CPU" formControlName="CPU" value="AMD" id="amd"/>AMD
       </span>
 
       <!--RAM-->
       <h3>RAM</h3>
       <span class="filtro">
-        <input type="radio" name="RAM" formControlName="RAM" value="8"/>8 GB
+        <input id="tipo8gb" type="radio" name="RAM" formControlName="RAM" value="8"/>8 GB
       </span>
       <br>
       <span class="filtro">
-        <input type="radio" name="RAM" formControlName="RAM" value="16"/>16 GB o mas
+        <input id="tipo16gb" type="radio" name="RAM" formControlName="RAM" value="16"/>16 GB o mas
       </span>
 
       <!--Precio-->
       <h3>Precio</h3>
       <span class="filtro">
-        <input type="number" name="minP" formControlName="minP" placeholder="Minimo" class="filtro_precio"/> -
-        <input type="number" name="maxP" formControlName="maxP" placeholder="Maximo" class="filtro_precio"/>
+        <input id="tipoPreMin" type="number" name="minP" formControlName="minP" placeholder="Minimo" class="filtro_precio"/> -
+        <input id="tipoPreMax" type="number" name="maxP" formControlName="maxP" placeholder="Maximo" class="filtro_precio"/>
       </span>
-      <input type="submit" class="boton_filtros" value="Aplicar filtros" />
+      <input id="BtnConfirmar" type="submit" class="boton_filtros" value="Aplicar filtros" />
       <input type="reset" value="Limpiar" class="boton_limpiar">
     </form>
   </div>
@@ -57,7 +57,7 @@
         </div>
         <div class="part3">
           <span class="precio">$1.766.000 COP</span>
-          <button (click)="addCarritorecom1()"  class="boton">Agregar al carrito</button>
+          <button id="agregarPc1" (click)="addCarritorecom1()"  class="boton">Agregar al carrito</button>
         </div>
       </div>
     </div>

@@ -4,16 +4,16 @@
       <form onsubmit="event.preventDefault()">
         <h1>Registrarse</h1>
         <label>Nombre</label>
-        <input type="text" #nombre>
+        <input id="nombre" type="text" #nombre>
         <label>Correo</label>
-        <input type="email" #email>
+        <input id="correo" type="email" #email>
         <label>Contraseña</label>
-        <input type="password" #password>
+        <input id="password"type="password" #password>
         <label>Repetir contraseña</label>
-        <input type="password" #pass2>
+        <input id="passwordC" type="password" #pass2>
         <label>Teléfono</label>
-        <input type="text" #tel>
-        <input (click)="registrar(email.value, password.value , nombre.value, tel.value, pass2.value)"
+        <input id="numeroTel" type="text" #tel>
+        <input id="btnRegistrar" (click)="registrar(email.value, password.value , nombre.value, tel.value, pass2.value)"
                type="submit" routerLink="/" value="Registrarse">
         <a class="link" routerLink="/Ingresar">¿Ya tienes cuenta? Ingresa aquí.</a>
       </form>

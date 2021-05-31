@@ -3,19 +3,19 @@
     <a routerLink="/" class="titulo">PC-DROME</a>
     <div class="buscador_home">
       <form (submit)="buscar()" [formGroup]="formulario">
-        <input type="search" class="buscador" formControlName="busqueda"/>
-        <input type="submit"   class="boton_buscar" value="Buscar">
+        <input id="barraBusqueda" type="search" class="buscador" formControlName="busqueda"/>
+        <input id="btnBuscar" type="submit"   class="boton_buscar" value="Buscar">
       </form>
     </div>
 
     <div *ngIf="mostrarI" class="sign_in" style="padding-left: 30px">
-      <a routerLink="Ingresar" class="ingresar">Ingresar</a>
+      <a id="ing" routerLink="Ingresar" class="ingresar">Ingresar</a>
     </div>
     <div *ngIf="mostrarP" class="sign_in">
       <a routerLink="Perfil" class="ingresar">Perfil</a>
     </div>
     <div *ngIf="mostrarL" class="sign_in">
-      <a (click)="logOut()" class="ingresar">Log Out</a>
+      <a id="cerrarSesion" (click)="logOut()" class="ingresar">Log Out</a>
     </div>
     <div class="carrito">
       <a routerLink="Carrito" class="ingresar">Carrito</a>
@@ -26,7 +26,7 @@
     <a routerLink="ArmarPC" class="menu" id="opcion1">Ensambla tu PC</a>
     <span style="color: #502f4c; font-size: 25px; font-weight: bold; float: left;">|</span>
     <a [routerLink]="['/productos','MOTHERBOARD']" class="menu">Motherboards</a>
-    <a [routerLink]="['/productos','CPU']" class="menu">Procesadores</a>
+    <a id="listCpus" [routerLink]="['/productos','CPU']" class="menu">Procesadores</a>
     <a [routerLink]="['/productos','RAM']" class="menu">Memorias</a>
     <a [routerLink]="['/productos','DISCODURO']" class="menu">Discos Duros</a>
     <a [routerLink]="['/productos','GPU']" class="menu">Tarjetas Graficas</a>
